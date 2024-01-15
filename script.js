@@ -6,6 +6,7 @@ let check = document.querySelector(".fa-circle");
 let delet = document.querySelector(".fa-trash");
 let warning = document.querySelector(".warning");
 let modeToggle = document.querySelector(".fa-solid");
+let notes = document.querySelector(".notes");
 
 modeToggle.addEventListener("click", function(e){
     let ele = document.body;
@@ -23,19 +24,29 @@ btn.addEventListener("click", function(){
         let listItem = document.createElement("div");
         listItem.classList.add("list-item");
         listItem.innerHTML = 
-        `<div>
-            <i class="fa-solid fa-circle"></i>
-            <p class="para">${input.value}</p>
+        `<div class="add-box">
+            <div class = "add-box-1">
+                <i class="fa-solid fa-circle"></i>
+                <p class="para">${input.value}</p>
+            </div>
+            <div class = "add-box-1">
+                <img src="resources/pencil.png" alt="notes" class="notes">
+                <i class="fa-solid fa-trash"></i>
+            </div>
         </div>
-        <i class="fa-solid fa-trash"></i>`;
-        mainContainer.appendChild(listItem);
-        input.value = "";
+        <div style="width: 100%;">
+            <textarea class="notesArea textArea"></textarea>
+        </div>`;
+            mainContainer.appendChild(listItem);
+            input.value = "";
     }
 });
 
 mainContainer.addEventListener("click", function(e){
     if(e.target.classList.contains('fa-trash')){
-        e.target.parentElement.remove();
+        let parentDiv = e.target.parentElement;
+        let grandparentDiv = parentDiv.parentElement;
+        grandparentDiv.parentElement.remove();
     }
 });
 
@@ -47,6 +58,15 @@ mainContainer.addEventListener("click", function(e){
     }
 });
 
+mainContainer.addEventListener("click", function(e){
+    if(e.target.classList.contains('notes')){
+        let parentDiv = e.target.parentElement;
+        let grandparentDiv = parentDiv.parentElement;
+        let siblingDiv = grandparentDiv.nextElementSibling;
+        let childDiv = siblingDiv.children[0];
+        childDiv.classList.toggle("notesArea");        
+    }
+});
 
 
 

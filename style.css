@@ -16,6 +16,7 @@ body{
 ::-webkit-scrollbar-thumb {
     background: rgb(177, 177, 177);
     border-radius: 6px;
+    cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -48,6 +49,10 @@ body{
     width: 50%;
 }
 
+.fa-solid{
+    cursor: pointer;
+}
+
 .fa-sun, .fa-moon{
     font-size: x-large;
     padding-right: 10px;
@@ -55,6 +60,7 @@ body{
 
 .todo{
     font-weight: 700;
+    cursor: pointer;
 }
 
 .todo-img{
@@ -75,6 +81,7 @@ body{
 .add-btn{
     width: 100px;
     background: rgb(254, 239, 205);
+    cursor: pointer;
 }
 
 .warning{
@@ -95,14 +102,20 @@ body{
 .list-item{
     padding: 7px 12px;
     margin: 6px;
-    display: flex;  
+    display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    align-items: center;
     background-color: rgb(177, 177, 177);
     border-radius: 4px;
 }
 
-.list-item div{
+.add-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.add-box-1{
     display: flex;
     align-items: center;
 }
@@ -111,6 +124,7 @@ body{
     padding-left: 14px;
     word-break: break-all;
     overflow-wrap: break-word;
+    align-self: center;
 }
 
 .fa-circle{
@@ -123,9 +137,29 @@ body{
     border-radius: 100%;
 }
 
+.notes{
+    width: 18px;
+    padding-right: 14px;
+    cursor: pointer;
+}
 
 .fa-trash{
     color: rgb(255, 73, 73);
+}
+
+.textArea{
+    margin-top: 10px;
+    height: 75px;
+    padding: 5px;
+    resize: none;
+    border: 2px solid black;
+    border-radius: 4px;
+    width: 427px;
+    background: #ffffff92;
+}
+
+.notesArea{
+    display:none;
 }
 
 .toggle-line{
