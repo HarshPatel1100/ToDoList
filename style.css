@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+body{
+    background-color: var(--secondary-color);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(177, 177, 177);
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(127, 127, 127);
+}
+
+.container{
+    margin: auto;
+    padding: 0px 6px;
+    width: 475px;
+    min-height: 77vh;
+    max-height: 77vh;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    position: relative;
+    top: 40px;
+}
+
+.heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    color: var(--secondary-color);
+}
+
+.heading div{
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.fa-sun, .fa-moon{
+    font-size: x-large;
+    padding-right: 10px;
+}
+
+.todo{
+    font-weight: 700;
+}
+
+.todo-img{
+    width: 50px;
+}
+
+.input{
+    padding: 10px;
+}
+
+.add-list{
+    padding: 7px;
+    width: 330px;
+    border: 3px solid black;
+    border-radius: 100px;
+}
+
+.add-btn{
+    width: 100px;
+    background: rgb(254, 239, 205);
+}
+
+.warning{
+    padding-left: 12px;
+    font-size: 10px;
+    text-decoration: underline;
+    text-align: start;
+    color: red;
+}
+
+.mainContainer{
+    min-height: 410px;
+    max-height: 410px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.list-item{
+    padding: 7px 12px;
+    margin: 6px;
+    display: flex;  
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(177, 177, 177);
+    border-radius: 4px;
+}
+
+.list-item div{
+    display: flex;
+    align-items: center;
+}
+
+.para{
+    padding-left: 14px;
+    word-break: break-all;
+    overflow-wrap: break-word;
+}
+
+.fa-circle{
+    color: white;
+}
+
+.fa-circle-check{
+    color: rgb(28, 176, 28);
+    background-color: white;
+    border-radius: 100%;
+}
+
+
+.fa-trash{
+    color: rgb(255, 73, 73);
+}
+
+.toggle-line{
+    color: rgb(75,75,75);
+    text-decoration: line-through;
+}
+
+:root{
+    --primary-color : white;
+    --secondary-color : #242424;
+}
+
+.dark-mode{
+    --secondary-color : white;
+    --primary-color: #242424;
+}
