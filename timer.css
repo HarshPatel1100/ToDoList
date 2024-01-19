@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+}
+
+.background{
+    background-color: #242424;
+    height: 100vh;
+    opacity: 50%;
+}
+
+.main-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    border-radius: 30px;
+}
+
+.fa-circle-xmark{
+    background-color: white;
+    border-radius: 50%;
+    font-size: x-large;
+    color: rgb(255, 71, 77);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: absolute;
+    top: -7%;
+    left: 101%;
+}
+
+.fa-circle-xmark:hover{
+    color: rgb(255, 0, 8);
+}
+
+.container1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 17px;
+}
+
+.hr,.min,.sec    {
+    display: flex;
+    margin: 0 15px;
+}
+
+.box {
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.digit {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    color: #333;
+    width: 100%;
+}
+
+.box:hover {
+    background-color: #e0e0e0;
+}
+
+.colon {
+    color: #fff;
+    font-size: 4rem;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+    margin-top: 34px;
+}
+
+.fa-circle-play{
+    background-color: white;
+    color:rgb(76, 175, 80);
+    border-radius: 50%;
+    font-size: 55px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.fa-circle-play:hover {
+    color: rgb(106, 255, 111);
+}
+
+.fa-rotate-right{
+    background-color: rgb(175, 76, 80);
+    color: white;
+    border-radius: 50%;
+    font-size: 29px;
+    padding: 13px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.fa-rotate-right:hover {
+    background-color: rgb(255, 139, 143);
+}
+
+.toggle{
+    width: 0px;
+    visibility: hidden;
+    opacity: 0%;
+}
+
